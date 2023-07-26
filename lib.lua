@@ -2684,8 +2684,22 @@ function library:new(cfg)
     local window_title_accent = library:create("Text", {Text = name_color, Parent = window_outline, Visible = true, Transparency = 1, Theme = "Text", Size = 13, Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0,utility.textlength(name_white, 2, 13).X + 10,0,7), ZIndex = 13});
     --
     utility.dragify(window_drag, dragoutline, window_outline);
-    function window.unload()
-
+    function window:unload()
+		library:set_open(false)
+		for _, tbl in next, {library.drawings, library.ignores} do
+			for _, drawings in next, tbl do
+				if rawget(drawings, "exists") then
+					drawings:Remove()
+					drawings = nil
+				end
+			end
+		end
+		for _, connection in next, library.connections do
+			library:disconnect(connection)
+		end
+        for _, instance in next, library.instances do
+			library:remove(instance)
+        end
     end
     -- // Pages
 
