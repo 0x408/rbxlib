@@ -1,4 +1,4 @@
-local startUpArgs = getgenv().startUpArgs or { 'universal', 'public' }
+local startUpArgs = getgenv().startUpArgs or { '.cc', '.cc' }
 -- [[
     --obleus remake
     --ignore the shitty code
@@ -186,7 +186,7 @@ local themes = { -- ignore
     };
 }
 local themeobjects = {};
-local library = {priorities = {}, friends = {}, notiflist = {ntifs = {}, interval = 12}, settings = {folder_name = "seere/"..startUpArgs[1];default_accent = Color3.fromRGB(255,255,255)}, drawings = {}, theme = table.clone(themes.Default),currentcolor = nil, flags = {}, open = false, mousestate = services.InputService.MouseIconEnabled, cursor = nil, holder = nil, connections = {}, notifications = {}, gradient = nil};
+local library = {priorities = {}, friends = {}, notiflist = {ntifs = {}, interval = 12}, settings = {folder_name = "jithack/"..startUpArgs[1];default_accent = Color3.fromRGB(255,255,255)}, drawings = {}, theme = table.clone(themes.Default),currentcolor = nil, flags = {}, open = false, mousestate = services.InputService.MouseIconEnabled, cursor = nil, holder = nil, connections = {}, notifications = {}, gradient = nil};
 local decode = (syn and syn.crypt.base64.decode) or (crypt and crypt.base64decode) or base64_decode;
 local flags = {};
 local configignores = {};
@@ -6222,7 +6222,7 @@ function library:createwatermark(info)
     watermark.objects.outline1 = library:outline(watermark.objects.background, Color3.fromRGB(44,44,44), 10, true)
     watermark.objects.outline2 = library:outline(watermark.objects.outline1, Color3.fromRGB(0,0,0), 10, true)
 
-    watermark.objects.text2 = library:create("Text", { Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Accent", Size = 13, Text = 'seere', Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 3,0,2), ZIndex = 11})
+    watermark.objects.text2 = library:create("Text", { Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Accent", Size = 13, Text = 'jitthack', Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 3,0,2), ZIndex = 11})
     watermark.objects.text3 = library:create("Text", { Text = title, Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Text", Size = 13, Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 1 + utility.textlength(watermark.objects.text2.Text, 2, 13).X,0,2), ZIndex = 11})
     --
     function watermark.setstate(bool)
