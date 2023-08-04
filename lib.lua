@@ -6152,6 +6152,12 @@ function library:notify(info)
     --
     local notiftext = library:create("Text", {Text = title, Parent = background, Visible = true, Transparency = 1, Theme = "Text", Size = 13, Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0,3,0,2), ZIndex = 11});
     --
+	function ntif.update(new_text)
+        notiftext.Text = new_text
+        background.Size = UDim2.new(0, utility.textlength(new_text, 2, 13).X + 5, 0, 19)
+        line1.Size = UDim2.new(0, utility.textlength(new_text, 2, 13).X + 5, 0, 1)
+    end
+
     function ntif.remove()
         local goaway = tween.new(ntif.instances[2], TweenInfo.new(0.4, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Position = UDim2.new(0,-500,0,0)}):Play()
 
