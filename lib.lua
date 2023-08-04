@@ -1,4 +1,4 @@
-local startUpArgs = getgenv().startUpArgs or { '.cc', '.cc' }
+local startUpArgs = getgenv().startUpArgs or { 'cc', 'cc' }
 -- [[
     --obleus remake
     --ignore the shitty code
