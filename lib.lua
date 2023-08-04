@@ -186,7 +186,7 @@ local themes = { -- ignore
     };
 }
 local themeobjects = {};
-local library = {priorities = {}, friends = {}, notiflist = {ntifs = {}, interval = 12}, settings = {folder_name = "jithack/"..startUpArgs[1];default_accent = Color3.fromRGB(255,255,255)}, drawings = {}, theme = table.clone(themes.Default),currentcolor = nil, flags = {}, open = false, mousestate = services.InputService.MouseIconEnabled, cursor = nil, holder = nil, connections = {}, notifications = {}, gradient = nil};
+local library = {priorities = {}, friends = {}, notiflist = {ntifs = {}, interval = 12}, settings = {folder_name = "jithack/"..startUpArgs[1];default_accent = Color3.fromRGB(255,255,255)}, drawings = {}, theme = table.clone(themes.Default),currentcolor = nil, flags = {}, open = false, mousestate = services.InputService.MouseIconEnabled, holder = nil, connections = {}, notifications = {}, gradient = nil};
 local decode = (syn and syn.crypt.base64.decode) or (crypt and crypt.base64decode) or base64_decode;
 local flags = {};
 local configignores = {};
@@ -366,7 +366,7 @@ library:instance('ImageButton', {
 
 library:connect(game:GetService('RunService').RenderStepped, function()
  --   if cursor1.Visible then
-        local pos = game:GetService('UserInputService'):GetMouseLocation();
+  --      local pos = game:GetService('UserInputService'):GetMouseLocation();
    --     cursor1.PointA = pos + Vector2.new(0, 3);
    --     cursor1.PointB = pos;
   --      cursor1.PointC = pos + Vector2.new(3, 0);
