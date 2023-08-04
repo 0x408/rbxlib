@@ -361,16 +361,16 @@ library:instance('ImageButton', {
     Transparency = 1;
 })
 
-local cursor1 = library:create('Quad', { Filled = true, Theme = 'Accent', ZIndex = 1500 });
+--local cursor1 = library:create('Quad', { Filled = true, Theme = 'Accent', ZIndex = 1500 });
 --local cursor2 = library:create('Quad', { Filled = true, Color = Color3.new(), ZIndex = 1499 });
 
 library:connect(game:GetService('RunService').RenderStepped, function()
-    if cursor1.Visible then
+ --   if cursor1.Visible then
         local pos = game:GetService('UserInputService'):GetMouseLocation();
-        cursor1.PointA = pos + Vector2.new(0, 3);
-        cursor1.PointB = pos;
-        cursor1.PointC = pos + Vector2.new(3, 0);
-        cursor1.PointD = pos + Vector2.new(3, 3);
+   --     cursor1.PointA = pos + Vector2.new(0, 3);
+   --     cursor1.PointB = pos;
+  --      cursor1.PointC = pos + Vector2.new(3, 0);
+   --     cursor1.PointD = pos + Vector2.new(3, 3);
         --
  --       cursor2.PointA = cursor1.PointA + Vector2.new(1, 1)
     --    cursor2.PointB = cursor1.PointB + Vector2.new(1, 1)
@@ -399,7 +399,7 @@ function library:set_open(bool)
         self.open = bool;
         screenGui.Enabled = bool
         self.holder.Visible = bool
-        cursor1.Visible = bool
+  --      cursor1.Visible = bool
    --     cursor2.Visible = bool
         local ContextActionService = game:GetService("ContextActionService")
         local InputService = game:GetService('UserInputService')
