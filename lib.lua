@@ -6222,7 +6222,7 @@ function library:createwatermark(info)
     watermark.objects.outline1 = library:outline(watermark.objects.background, Color3.fromRGB(44,44,44), 10, true)
     watermark.objects.outline2 = library:outline(watermark.objects.outline1, Color3.fromRGB(0,0,0), 10, true)
 
-    watermark.objects.text2 = library:create("Text", { Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Accent", Size = 13, Text = 'jitthack', Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 3,0,2), ZIndex = 11})
+    watermark.objects.text2 = library:create("Text", { Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Accent", Size = 13, Text = 'jithack', Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 3,0,2), ZIndex = 11})
     watermark.objects.text3 = library:create("Text", { Text = title, Parent = watermark.objects.background, Visible = true, Transparency = 1, Theme = "Text", Size = 13, Center = false, Outline = false, Font = Drawing.Fonts.Plex, Position = UDim2.new(0, 1 + utility.textlength(watermark.objects.text2.Text, 2, 13).X,0,2), ZIndex = 11})
     --
     function watermark.setstate(bool)
