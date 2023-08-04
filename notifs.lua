@@ -361,8 +361,8 @@ library:instance('ImageButton', {
     Transparency = 1;
 })
 
-local cursor1 = library:create('Quad', { Filled = true, Theme = 'Accent', ZIndex = 1500, Visible = false });
-local cursor2 = library:create('Quad', { Filled = true, Color = Color3.new(), ZIndex = 1499, Visible = false });
+local cursor1 = nil;
+local cursor2 = nil;
 
 
 library:connect(game:GetService('RunService').RenderStepped, function()
