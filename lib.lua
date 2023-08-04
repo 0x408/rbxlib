@@ -424,7 +424,7 @@ function library:set_open(bool)
             );
             InputService.MouseIconEnabled = false
         else
-            InputService.MouseIconEnabled = originalState
+            InputService.MouseIconEnabled = true
             ContextActionService:UnbindAction("Scrolling");
             ContextActionService:UnbindAction("Input");
         end;
