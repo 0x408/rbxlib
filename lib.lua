@@ -6203,6 +6203,7 @@ function library:notify(info)
     end
 
     library.notiflist.reposition()
+    return ntif  
 end;
 
 function library:createwatermark(info)
